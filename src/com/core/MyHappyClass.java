@@ -1,3 +1,5 @@
+package com.core;
+
 public class MyHappyClass {
     //Write Code Here
 

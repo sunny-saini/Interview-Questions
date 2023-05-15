@@ -24,5 +24,11 @@ public class TestComprator {
         List<EmpComprartor> emp1 = list.stream().sorted(Comparator.comparing(EmpComprartor::getSalary).reversed()).collect(Collectors.toList());
 
         System.out.println(emp1);
+        List<String> st= new ArrayList<>(Arrays.asList("sunny","saini","Kumar"));
+
+        String op = st.stream().collect(Collectors.joining(", "));
+        System.out.println(op);
+
+
     }
 }

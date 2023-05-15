@@ -1,19 +1,16 @@
-package com.core.java8;
+package com.core.ConcentrixQuestions;
 
 public class Employee {
-   private int id;
-   private String name;
-   private String address;
+    private  int id;
+    private String name;
+    private int  age;
 
-
-
-    public Employee(int id, String name, String address) {
+    public Employee(int id, String name, int age) {
         this.id = id;
         this.name = name;
-        this.address = address;
+        this.age = age;
     }
 
-   public Employee(){}
     public int getId() {
         return id;
     }
@@ -30,12 +27,12 @@ public class Employee {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public int getAge() {
+        return age;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
@@ -43,7 +40,7 @@ public class Employee {
         return "Employee{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
+                ", age=" + age +
                 '}';
     }
 }

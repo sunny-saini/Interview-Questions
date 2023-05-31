@@ -6,14 +6,16 @@ import java.util.stream.Collectors;
 public class TestComprator {
 
     public static void main(String[] args) {
-        EmpComprartor e1 = new EmpComprartor(1, "Sunni", 2000.98);
-        EmpComprartor e2 = new EmpComprartor(2, "Saini", 200220.98);
-        EmpComprartor e3 = new EmpComprartor(4, "Kumar", 12000.98);
+        EmpComprartor e1 = new EmpComprartor(1, "Sunni", 12000.98,"CSE");
+        EmpComprartor e2 = new EmpComprartor(2, "Saini", 200220.98,"ME");
+        EmpComprartor e3 = new EmpComprartor(4, "Kumar", 12000.98,"CSE");
+        EmpComprartor e4 = new EmpComprartor(5, "Jatta", 125000.98,"CSE");
 
         List<EmpComprartor> list = new ArrayList<>();
         list.add(e1);
         list.add(e2);
         list.add(e3);
+        list.add(e4);
 
 
         Collections.sort(list,new NameComprator());
@@ -28,6 +30,19 @@ public class TestComprator {
 
         String op = st.stream().collect(Collectors.joining(", "));
         System.out.println(op);
+
+
+       // students.stream()
+           //     .collect(Collectors.groupingBy(
+                   //     Student::getCity,
+                     //   Collectors.mapping(Student::getName, Collectors.toList())));
+
+        Map<String, List<String>> out = list.stream().
+                collect(Collectors.groupingBy(
+                        EmpComprartor::getDept, Collectors.mapping(EmpComprartor::getName, Collectors.toList())));
+
+
+
 
 
     }

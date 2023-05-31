@@ -6,7 +6,10 @@ import java.util.Map;
 public class MissingNumberAndRepeatNumber {
 
     public static void main(String[] args) {
-        new MissingNumberAndRepeatNumber().missAndRepaet(new int[]{7, 3, 4, 5, 5, 6, 2});
+     //   new MissingNumberAndRepeatNumber().missAndRepaet(new int[]{7, 3, 4, 5, 5, 6, 2});
+
+       int result= firstMissingPositive(new int[] {679});
+       System.out.println(result);
     }
 
     void missAndRepaet(int arr[]) {
@@ -32,6 +35,25 @@ public class MissingNumberAndRepeatNumber {
         }
         System.out.println(missingNum);
 
+    }
+
+    public static int firstMissingPositive(int[] A) {
+
+        int temp[]=new int[A.length+1];
+
+        for(int i=0;i<A.length;i++){
+            if(A[i]<0 || A[i]>A.length)
+                continue;
+            temp[A[i]]++;
+        }
+
+        for(int i=1;i<temp.length;i++){
+
+            if(temp[i]==0)
+               return i;
+        }
+
+        return A.length+1;
     }
 }
 

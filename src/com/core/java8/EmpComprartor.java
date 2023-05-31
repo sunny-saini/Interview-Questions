@@ -9,10 +9,14 @@ public class EmpComprartor  {
 
     private Double salary;
 
-    public EmpComprartor(int id, String name, Double salary) {
+
+    private String dept;
+
+    public EmpComprartor(int id, String name, Double salary,String dept) {
         this.id = id;
         this.name = name;
         this.salary = salary;
+        this.dept=dept;
     }
 
     public int getId() {
@@ -39,12 +43,22 @@ public class EmpComprartor  {
         this.salary = salary;
     }
 
+
+    public String getDept() {
+        return dept;
+    }
+
+    public void setDept(String dept) {
+        this.dept = dept;
+    }
+
     @Override
     public String toString() {
         return "EmpComprartor{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", salary=" + salary +
+                ", dept='" + dept + '\'' +
                 '}';
     }
 }

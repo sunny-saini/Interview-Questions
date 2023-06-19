@@ -15,9 +15,14 @@ public class PrintPrime {
 
    void printPrime(int n){
       List<Integer> s = IntStream.rangeClosed(2, n).boxed().collect(Collectors.toList());
-       List<Integer> as = s.stream().filter(fil -> findPrime(fil)).collect(Collectors.toList());
+      // List<Integer> as = s.stream().filter(fil -> findPrime(fil)).collect(Collectors.toList());
 
-       System.out.println(as);
+       for(int i=2;i<=20;i++){
+      if(findPrime(i))
+        System.out.println(i);
+       }
+
+     //  System.out.println(as);
 
 
     }

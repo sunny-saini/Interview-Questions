@@ -8,7 +8,7 @@ public class MissingNumberAndRepeatNumber {
     public static void main(String[] args) {
      //   new MissingNumberAndRepeatNumber().missAndRepaet(new int[]{7, 3, 4, 5, 5, 6, 2});
 
-       int result= firstMissingPositive(new int[] {679});
+       int result= firstMissingPositive(new int[] {1,2,3,4,5,6,7,8,9});
        System.out.println(result);
     }
 

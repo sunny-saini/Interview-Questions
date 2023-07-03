@@ -14,6 +14,10 @@ public class Main {
             // Press ⌃D to start debugging your code. We have set one breakpoint
             // for you, but you can always add more by pressing ⌘F8.
             System.out.println("i = " + i);
+            int meal = 5;
+            int tip = 2;
+            int total = meal + (meal>6 ? tip++ : tip--);
+            System.out.print(total);//6
         }
     }
 }

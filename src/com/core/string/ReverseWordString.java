@@ -26,30 +26,18 @@ public class ReverseWordString {
 
 
 
+        String str1="";
 
+       String [] str2= str.split(" ");
 
-        String str1 ="";
+for (int i=str2.length-1; i>=0;i--){
 
-        for(int i=str.length()-1; i>=0;i--){
-            str1+=str.charAt(i);
-        }
-
-       String [] str2= str1.split(" ");
-
-for (int i=0;i<str2.length;i++){
-
-    String temp = str2[i];
-    String  s="";
-    for(int k=temp.length()-1;k>=0;k--){
-
-       s+= temp.charAt(k);
-
-    }
-    System.out.print(" "+s);
+str1+=str2[i]+ " ";
 
 
 
         }
+System.out.println(str1);
 
     }
     }

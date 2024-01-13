@@ -14,7 +14,7 @@ public class FlapMapVsMap {
         List<List<Integer>> list4= new ArrayList<>(Arrays.asList(list,list2,list3));
 
 
-        List<Integer> ans = list4.stream().flatMap(fmp -> fmp.stream()).collect(Collectors.toList());
+        List<Integer> ans = list4.stream().flatMap(fmp -> fmp.stream()).sorted().collect(Collectors.toList());
         System.out.println(ans);
 
 

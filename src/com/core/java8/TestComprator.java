@@ -25,11 +25,11 @@ public class TestComprator {
         List<EmpComprartor> emp = list.stream().sorted((o1, o2) -> o1.getName().compareTo(o2.getName())).collect(Collectors.toList());
         List<EmpComprartor> emp1 = list.stream().sorted(Comparator.comparing(EmpComprartor::getSalary).reversed()).collect(Collectors.toList());
 
-        System.out.println(emp1);
+     //   System.out.println(emp1);
         List<String> st= new ArrayList<>(Arrays.asList("sunny","saini","Kumar"));
 
         String op = st.stream().collect(Collectors.joining(", "));
-        System.out.println(op);
+   //     System.out.println(op);
 
 
        // students.stream()
@@ -41,6 +41,8 @@ public class TestComprator {
                 collect(Collectors.groupingBy(
                         EmpComprartor::getDept, Collectors.mapping(EmpComprartor::getName, Collectors.toList())));
 
+
+System.out.println(out);
 
 
 

@@ -3,7 +3,10 @@ package com.core.ConcentrixQuestions;
 import com.core.ConcentrixQuestions.Employee;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class EmployeeFilterClass {
     public static void main(String[] args) {
@@ -17,7 +20,7 @@ public class EmployeeFilterClass {
         System.out.println(result);
 
 
-
+        Map<Integer, String> map = list.stream().collect(Collectors.toMap(Employee::getId, Employee::getName));
        
     }
 }

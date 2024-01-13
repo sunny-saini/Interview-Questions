@@ -14,8 +14,10 @@ public class CommaonElement {
     }
 
     private static void fetchCommanElement2(int[] arr1, int[] arr2) {
-        List<Integer> listCommon= Arrays.stream(arr1).filter(e-> Arrays.stream(arr2).anyMatch(e1->e1==e)).boxed().collect(Collectors.toList());
-   System.out.println(listCommon);
+
+        List<Integer> listCommon = Arrays.stream(arr1).filter(el -> Arrays.stream(arr2).anyMatch(any -> any == el)).boxed().collect(Collectors.toList());
+        
+        System.out.println(listCommon);
     }
 
 
@@ -32,3 +34,4 @@ public class CommaonElement {
 
 
 }
+//List<Integer> listCommon= Arrays.stream(arr1).filter(e-> Arrays.stream(arr2).anyMatch(e1->e1==e)).boxed().collect(Collectors.toList());

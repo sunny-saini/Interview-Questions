@@ -47,6 +47,7 @@ public class MergeSort {
             merge[x++]=arr[inx2++];
 
         for(int i=0;i<merge.length;i++) {
+
             arr[si+i]=merge[i];
         }
         return arr;

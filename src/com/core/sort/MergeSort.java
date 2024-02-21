@@ -8,6 +8,9 @@ public class MergeSort {
     public static void main(String[] args) {
         int[] result = solve(new int[]{7, 5, 4, 3, 2,1});
         System.out.println(Arrays.toString(result));
+
+        System.out.println(0);
+
     }
     public  static int[] solve(int[] A) {
 
@@ -25,7 +28,6 @@ public class MergeSort {
     }
 
     private static int[]  conqure(int arr[], int si, int mid, int ei) {
-
         int merge[]= new int [ei-si+1];
         int inx1=si;
         int inx2=mid+1;
@@ -46,8 +48,8 @@ public class MergeSort {
         while(inx2<=ei)
             merge[x++]=arr[inx2++];
 
-        for(int i=0;i<merge.length;i++) {
-            arr[si+i]=merge[i];
+        for(int i=0,j=si;i<merge.length;i++,j++) {
+            arr[j]=merge[i];
         }
         return arr;
 

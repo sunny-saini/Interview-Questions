@@ -23,7 +23,7 @@ public class TestComprator {
         System.out.println("======================");
 
         List<EmpComprartor> emp = list.stream().sorted((o1, o2) -> o1.getName().compareTo(o2.getName())).collect(Collectors.toList());
-        List<EmpComprartor> emp1 = list.stream().sorted(Comparator.comparing(EmpComprartor::getSalary).reversed()).collect(Collectors.toList());
+      //  List<EmpComprartor> emp1 = list.stream().sorted(Comparator.comparing(EmpComprartor::getSalary).reversed()).collect(Collectors.toList());
 
      //   System.out.println(emp1);
         List<String> st= new ArrayList<>(Arrays.asList("sunny","saini","Kumar"));

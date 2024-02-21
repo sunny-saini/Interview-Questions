@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class CheckAnySequencePalindrome {
     public static void main(String[] args) {
-        String str="aabbe";//aabebaa
+        String str="abab";//aabebaa
      boolean re= checkpalin(str);
      System.out.println(re);
 
